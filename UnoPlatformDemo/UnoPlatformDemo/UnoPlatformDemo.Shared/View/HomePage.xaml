@@ -1,0 +1,103 @@
+﻿<Page
+    x:Class="UnoPlatformDemo.View.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UnoPlatformDemo.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Background="White">
+
+    <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="HeroImage.(Grid.Column)" Value="1" />
+                        <Setter Target="HeroImage.(Grid.RowSpan)" Value="2" />
+                        <Setter Target="TitlePanel.(Grid.RowSpan)" Value="2" />
+                        <Setter Target="TitleTextBlock.FontSize" Value="60" />
+                        <Setter Target="ContentTextBlock.FontSize" Value="40" />
+                        <Setter Target="TitlePanel.Margin" Value="0" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="NormalState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <ScrollViewer>
+            <StackPanel MaxWidth="1200" Padding="20,80,20,100" Spacing="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image x:Name="HeroImage" MaxHeight="400" Grid.ColumnSpan="2" Source="ms-appx:///Assets/Images/hero.png" Stretch="Uniform" Margin="0,0,0,0" />
+                    <StackPanel x:Name="TitlePanel" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,20,0,0" VerticalAlignment="Center">
+                        <TextBlock x:Name="TitleTextBlock" Text=".NET Conf 2021" FontSize="40" Foreground="{StaticResource AccentColor}" />
+                        <TextBlock x:Name="ContentTextBlock" Text="November 9-11" FontSize="24" />
+                    </StackPanel>
+                </Grid>
+                <TextBlock Text=".NET Conf 2021 is a wrap!" HorizontalAlignment="Center" 
+                           Foreground="{StaticResource AccentColor}" FontSize="40" Margin="0,80,0,0" TextWrapping="Wrap" />
+                <TextBlock Text="A huge THANK YOU to all who tuned in live, asked questions in our twitter feed and participated in our fun and games. We had a lot of awesome sessions from various teams and community experts that showed us all sorts of cool things we can build with .NET across platforms and devices. The learning continues with community-run virtual events happening thru the end of January so make sure to check those out. Also, watch the session replays and keep an eye on our conference GitHub repo where we are collecting all the slides and demos from our presenters."
+                           TextWrapping="Wrap" FontSize="18" />
+
+                <ScrollViewer HorizontalAlignment="Center" VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Disabled" HorizontalScrollMode="Auto" HorizontalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Horizontal" Spacing="40"  Margin="0,10,0,10">
+                        <Grid Height="180" Width="240">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image Source="ms-appx:///Assets/Images/thats-a-wrap.png" />
+                            <TextBlock Text="Watch session replays" FontSize="16" Grid.Row="1" HorizontalAlignment="Center" 
+                                       Foreground="{StaticResource AccentColor}" />
+                        </Grid>
+                        <Grid Height="180" Width="240">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image Source="ms-appx:///Assets/Images/remote-conference.png" />
+                            <TextBlock Text="Attend a community virtual event" FontSize="16" Grid.Row="1" HorizontalAlignment="Center" 
+                                       Foreground="{StaticResource AccentColor}" />
+                        </Grid>
+                        <Grid Height="180" Width="240">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image Source="ms-appx:///Assets/Images/conference-at-a-glance.png" />
+                            <TextBlock Text="View slides and demos" FontSize="16" Grid.Row="1" HorizontalAlignment="Center" 
+                                       Foreground="{StaticResource AccentColor}" />
+                        </Grid>
+                        <Grid Height="180" Width="240">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image Source="ms-appx:///Assets/Images/world-of-dotnet.png" />
+                            <TextBlock Text="Get your digital swag" FontSize="16" Grid.Row="1" HorizontalAlignment="Center" 
+                                       Foreground="{StaticResource AccentColor}" />
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+                
+            </StackPanel>
+        </ScrollViewer>
+        <Grid>
+            
+        </Grid>
+    </Grid>
+</Page>

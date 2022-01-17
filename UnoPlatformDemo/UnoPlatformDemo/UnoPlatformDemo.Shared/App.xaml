@@ -1,0 +1,157 @@
+﻿<Application
+    x:Class="UnoPlatformDemo.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ios="http://Uno.UI/ios"
+	xmlns:android="http://Uno.UI/android"
+	xmlns:win="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    mc:Ignorable="ios android"
+    xmlns:local="using:UnoPlatformDemo">
+	
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+
+            </ResourceDictionary.MergedDictionaries>
+            <ios:Style x:Key="NativeDefaultFrame"
+			   TargetType="Frame">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Frame">
+                            <NativeFramePresenter Background="{TemplateBinding Background}" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </ios:Style>
+
+            <android:Style x:Key="NativeDefaultFrame"
+				   TargetType="Frame">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Frame">
+                            <NativeFramePresenter Background="{TemplateBinding Background}" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </android:Style>
+
+            <win:Style x:Key="NativeDefaultFrame"
+			   TargetType="Frame">
+                <Setter Property="HorizontalContentAlignment"
+				Value="Stretch" />
+                <Setter Property="IsTabStop"
+				Value="False" />
+                <Setter Property="VerticalContentAlignment"
+				Value="Stretch" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Frame">
+                            <ContentPresenter Content="{TemplateBinding Content}"
+									  ContentTemplate="{TemplateBinding ContentTemplate}"
+									  ContentTransitions="{TemplateBinding ContentTransitions}"
+									  Background="{TemplateBinding Background}"
+									  BorderBrush="{TemplateBinding BorderBrush}"
+									  BorderThickness="{TemplateBinding BorderThickness}"
+									  Padding="{TemplateBinding Padding}"
+									  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+									  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </win:Style>
+            <Style x:Key="DefaultFrame"
+			   TargetType="Frame">
+                <Setter Property="HorizontalContentAlignment"
+				Value="Stretch" />
+                <Setter Property="IsTabStop"
+				Value="False" />
+                <Setter Property="VerticalContentAlignment"
+				Value="Stretch" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Frame">
+                            <ContentPresenter Content="{TemplateBinding Content}"
+									  ContentTemplate="{TemplateBinding ContentTemplate}"
+									  ContentTransitions="{TemplateBinding ContentTransitions}"
+									  Background="{TemplateBinding Background}"
+									  BorderBrush="{TemplateBinding BorderBrush}"
+									  BorderThickness="{TemplateBinding BorderThickness}"
+									  Padding="{TemplateBinding Padding}"
+									  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+									  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="Frame"
+		   BasedOn="{StaticResource NativeDefaultFrame}" />
+            <SolidColorBrush x:Key="AccentColor" Color="#FF512BD4" />
+            <FontFamily x:Key="IconFontStyle">ms-appx:///Assets/Fonts/FluentSystemIcons-Regular.ttf#FluentSystemIcons-Regular</FontFamily>
+
+            <Style x:Key="ImageButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="MinHeight" Value="0"/>
+                <Setter Property="MinWidth" Value="0"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Grid x:Name="Grid" Background="Transparent">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualStateGroup.Transitions>
+                                            <VisualTransition From="Pressed" To="PointerOver">
+                                                <Storyboard>
+                                                    <PointerUpThemeAnimation Storyboard.TargetName="Grid"/>
+                                                </Storyboard>
+                                            </VisualTransition>
+                                            <VisualTransition From="PointerOver" To="Normal">
+                                                <Storyboard>
+                                                    <PointerUpThemeAnimation Storyboard.TargetName="Grid"/>
+                                                </Storyboard>
+                                            </VisualTransition>
+                                            <VisualTransition From="Pressed" To="Normal">
+                                                <Storyboard>
+                                                    <PointerUpThemeAnimation Storyboard.TargetName="Grid"/>
+                                                </Storyboard>
+                                            </VisualTransition>
+                                        </VisualStateGroup.Transitions>
+                                        <VisualState x:Name="Normal"/>
+                                        <VisualState x:Name="PointerOver">
+
+                                        </VisualState>
+                                        <VisualState x:Name="Pressed">
+                                            <Storyboard>
+                                                <PointerDownThemeAnimation Storyboard.TargetName="Grid"/>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Disabled">
+                                            <VisualState.Setters>
+                                                <Setter Target="Grid.Opacity" Value="0.6" />
+                                            </VisualState.Setters>
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="Border">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledBorderThemeBrush}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="0,0,0,0">
+                                    <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="#FFD83131"/>
+                                </Border>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>

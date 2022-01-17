@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)uno.wasm.bootstrap.devserver\3.1.2\build\Uno.Wasm.Bootstrap.DevServer.targets" Condition="Exists('$(NuGetPackageRoot)uno.wasm.bootstrap.devserver\3.1.2\build\Uno.Wasm.Bootstrap.DevServer.targets')" />
+    <Import Project="$(NuGetPackageRoot)uno.wasm.bootstrap\3.1.2\build\Uno.Wasm.Bootstrap.targets" Condition="Exists('$(NuGetPackageRoot)uno.wasm.bootstrap\3.1.2\build\Uno.Wasm.Bootstrap.targets')" />
+    <Import Project="$(NuGetPackageRoot)uno.sourcegenerationtasks\4.0.0\build\netstandard1.0\Uno.SourceGenerationTasks.targets" Condition="Exists('$(NuGetPackageRoot)uno.sourcegenerationtasks\4.0.0\build\netstandard1.0\Uno.SourceGenerationTasks.targets')" />
+    <Import Project="$(NuGetPackageRoot)uno.ui\4.0.11\buildTransitive\netstandard2.0\Uno.UI.targets" Condition="Exists('$(NuGetPackageRoot)uno.ui\4.0.11\buildTransitive\netstandard2.0\Uno.UI.targets')" />
+    <Import Project="$(NuGetPackageRoot)uno.ui.runtime.webassembly\4.0.11\buildTransitive\Uno.UI.Runtime.WebAssembly.targets" Condition="Exists('$(NuGetPackageRoot)uno.ui.runtime.webassembly\4.0.11\buildTransitive\Uno.UI.Runtime.WebAssembly.targets')" />
+    <Import Project="$(NuGetPackageRoot)uno.ui.webassembly\4.0.11\build\Uno.UI.WebAssembly.targets" Condition="Exists('$(NuGetPackageRoot)uno.ui.webassembly\4.0.11\build\Uno.UI.WebAssembly.targets')" />
+    <Import Project="$(NuGetPackageRoot)uno.ui.remotecontrol\4.0.11\buildTransitive\Uno.UI.RemoteControl.targets" Condition="Exists('$(NuGetPackageRoot)uno.ui.remotecontrol\4.0.11\buildTransitive\Uno.UI.RemoteControl.targets')" />
+  </ImportGroup>
+</Project>

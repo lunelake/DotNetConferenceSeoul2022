@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="UnoPlatformDemo.View.AgendaPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UnoPlatformDemo.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:DefaultBindMode="OneWay"
+    Background="White">
+
+    <Grid>
+        <ListView ItemsSource="{x:Bind AgendaList}" Padding="0,20" IsItemClickEnabled="True" ItemClick="ItemClicked">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Agenda">
+                    <StackPanel BorderThickness="1" Spacing="2" Background="White" BorderBrush="#11000000" CornerRadius="8" Padding="12" Margin="0,10,0,10">
+                        <TextBlock Text="{x:Bind Title}" FontSize="20" Foreground="#FF444444" FontWeight="Bold" TextWrapping="Wrap" />
+                        <TextBlock Text="{x:Bind Time}" Foreground="#FF444444" />
+                        <TextBlock Text="{x:Bind Speaker}" Foreground="#FF444444" />
+                        <TextBlock Text="{x:Bind Description}" Foreground="#FF444444" Margin="0,4,0,0" TextWrapping="Wrap" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

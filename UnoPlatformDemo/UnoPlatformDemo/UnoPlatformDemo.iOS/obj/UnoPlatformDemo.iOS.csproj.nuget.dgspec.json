@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\lunel\\source\\repos\\App8\\UnoPlatformDemo\\UnoPlatformDemo.iOS\\UnoPlatformDemo.iOS.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\lunel\\source\\repos\\App8\\UnoPlatformDemo\\UnoPlatformDemo.iOS\\UnoPlatformDemo.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lunel\\source\\repos\\App8\\UnoPlatformDemo\\UnoPlatformDemo.iOS\\UnoPlatformDemo.iOS.csproj",
+        "projectName": "UnoPlatformDemo",
+        "projectPath": "C:\\Users\\lunel\\source\\repos\\App8\\UnoPlatformDemo\\UnoPlatformDemo.iOS\\UnoPlatformDemo.iOS.csproj",
+        "packagesPath": "C:\\Users\\lunel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lunel\\source\\repos\\App8\\UnoPlatformDemo\\UnoPlatformDemo.iOS\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lunel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Uno.Extensions.Logging.OSLog": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Uno.UI": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "Uno.UI.Adapter.Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "Uno.UI.RemoteControl": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

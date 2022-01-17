@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="UnoPlatformDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UnoPlatformDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:toolkit="using:Uno.UI.Toolkit"
+    Background="White">
+
+    <Grid toolkit:VisibleBoundsPadding.PaddingMask="All">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="LeftMenuPanel.Visibility" Value="Visible" />
+                        <Setter Target="BottomMenuPanel.Visibility" Value="Collapsed" />
+                        <Setter Target="MainFrame.(Grid.Column)" Value="1" />
+                        <Setter Target="MainFrame.(Grid.RowSpan)" Value="2" />
+                        <Setter Target="LeftMenuPanel.(Grid.RowSpan)" Value="2" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="NormalState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="MainFrame" Grid.ColumnSpan="2"  Style="{StaticResource DefaultFrame}" />
+        <Grid x:Name="BottomMenuPanel" Grid.Row="1" Grid.ColumnSpan="2" Background="White" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Button Style="{StaticResource ImageButtonStyle}" HorizontalAlignment="Stretch">
+                <Grid Background="Transparent">
+                    <TextBlock Text="&#xF480;" TextAlignment="Center" FontSize="32" Foreground="Black" FontFamily="{ThemeResource IconFontStyle}" />
+                </Grid>
+            </Button>
+            <Button Style="{StaticResource ImageButtonStyle}" HorizontalAlignment="Stretch" Grid.Column="1">
+                <Grid Background="Transparent">
+                    <TextBlock Text="&#xF213;" TextAlignment="Center" FontSize="32" Foreground="Black" FontFamily="{ThemeResource IconFontStyle}" />
+                </Grid>
+            </Button>
+        </Grid>
+        <StackPanel x:Name="LeftMenuPanel" Visibility="Collapsed" Padding="0,20,0,0" x:Load="False" Background="#11000000" Width="60" Spacing="24" >
+            <Button Style="{StaticResource ImageButtonStyle}" Click="{x:Bind GoToHomePage}" HorizontalAlignment="Stretch">
+                <Grid Background="Transparent">
+                    <TextBlock Text="&#xF480;" TextAlignment="Center" FontSize="32" Foreground="Black" FontFamily="{ThemeResource IconFontStyle}" />
+                </Grid>
+            </Button>
+            <Button Style="{StaticResource ImageButtonStyle}" Click="{x:Bind GoToAgendaPage}" HorizontalAlignment="Stretch" Grid.Column="1">
+                <Grid Background="Transparent">
+                    <TextBlock Text="&#xF213;" TextAlignment="Center" FontSize="32" Foreground="Black" FontFamily="{ThemeResource IconFontStyle}" />
+                </Grid>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>

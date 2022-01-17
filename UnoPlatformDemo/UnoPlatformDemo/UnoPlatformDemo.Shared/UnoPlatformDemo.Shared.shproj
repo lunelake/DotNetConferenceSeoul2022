@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>6279c845-92f8-4333-ab99-3d213163593c</ProjectGuid>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.Common.Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.Common.props" />
+  <PropertyGroup />
+  <Import Project="UnoPlatformDemo.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.CSharp.targets" />
+  <ItemGroup>
+    <_Globbed_Compile Remove="View\AgendaDetail.xaml.cs" />
+    <_Globbed_Compile Remove="View\AgendaDetailPage.xaml.cs" />
+    <_Globbed_Compile Remove="View\AgendaPage.xaml.cs" />
+    <_Globbed_Compile Remove="View\HomePage.xaml.cs" />
+    <_Globbed_Compile Remove="View\SpeakerPage.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <_Globbed_Content Remove="Assets\Fonts\FluentSystemIcons-Filled.ttf" />
+    <_Globbed_Content Remove="Assets\Fonts\FluentSystemIcons-Regular.ttf" />
+    <_Globbed_Content Remove="Assets\Images\conference-at-a-glance.png" />
+    <_Globbed_Content Remove="Assets\Images\hero.png" />
+    <_Globbed_Content Remove="Assets\Images\hero.svg" />
+    <_Globbed_Content Remove="Assets\Images\remote-conference.png" />
+    <_Globbed_Content Remove="Assets\Images\thats-a-wrap.png" />
+    <_Globbed_Content Remove="Assets\Images\world-of-dotnet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <_Globbled_Page Remove="View\AgendaDetail.xaml" />
+    <_Globbled_Page Remove="View\AgendaDetailPage.xaml" />
+    <_Globbled_Page Remove="View\AgendaPage.xaml" />
+    <_Globbled_Page Remove="View\HomePage.xaml" />
+    <_Globbled_Page Remove="View\SpeakerPage.xaml" />
+  </ItemGroup>
+</Project>

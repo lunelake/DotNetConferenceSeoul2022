@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="UnoPlatformDemo.View.AgendaDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UnoPlatformDemo.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d ios"
+    xmlns:ios="http://uno.ui/ios"
+    xmlns:not_ios="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    x:DefaultBindMode="OneWay"
+    xmlns:toolkit="using:Uno.UI.Toolkit"
+    Background="White">
+    <Page.Resources>
+    </Page.Resources>
+    <Grid toolkit:VisibleBoundsPadding.PaddingMask="All">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ios:CommandBar x:Name="CommandBarView" toolkit:CommandBarExtensions.BackButtonTitle="Back" >
+            <ios:CommandBar.Content>
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock Text="세션 정보"
+                       HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                       FontSize="17" />
+                </StackPanel>
+            </ios:CommandBar.Content>
+        </ios:CommandBar>
+        <not_ios:Grid Margin="0,4,0,0">
+            <not_ios:Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </not_ios:Grid.ColumnDefinitions>
+            <Button Style="{StaticResource ImageButtonStyle}" Click="{x:Bind GoBack}">
+                <Grid Margin="8,0,0,0" Background="Transparent">
+                    <TextBlock Text="&#xF2AA;" TextAlignment="Center" FontSize="32" Foreground="Black" FontFamily="{ThemeResource IconFontStyle}" />
+                </Grid>
+            </Button>
+
+            <TextBlock Text="세션 정보" FontSize="18" VerticalAlignment="Center" Margin="4,0,0,0" Grid.Column="1" />
+        </not_ios:Grid>
+        <ScrollViewer Grid.Row="1" Margin="20,20,20,0">
+            <StackPanel Spacing="8">
+                <TextBlock Text="{x:Bind Agenda.Title}" FontSize="20" FontWeight="Bold" TextWrapping="Wrap" />
+                <TextBlock Text="{x:Bind Agenda.Time}" FontSize="16" />
+                <TextBlock Text="{x:Bind Agenda.Speaker}" FontSize="16" />
+                <TextBlock Text="{x:Bind Agenda.Description}" FontSize="16" Margin="0,10,0,0" TextWrapping="Wrap" />
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+    
+</Page>

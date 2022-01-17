@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6279c845-92f8-4333-ab99-3d213163593c": {
+      "ProjectGuid": "6279c845-92f8-4333-ab99-3d213163593c",
+      "DisplayName": "UnoPlatformDemo.Shared",
+      "ColorIndex": 0
+    },
+    "20e9ee38-1a9f-4b33-9b7e-64187c321f77": {
+      "ProjectGuid": "20e9ee38-1a9f-4b33-9b7e-64187c321f77",
+      "DisplayName": "UnoPlatformDemo.Skia.Gtk",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "기타 파일",
+      "ColorIndex": -1
+    },
+    "e1de7428-4ac4-4138-8176-676880fbd718": {
+      "ProjectGuid": "e1de7428-4ac4-4138-8176-676880fbd718",
+      "DisplayName": "UnoPlatformDemo.Droid",
+      "ColorIndex": 2
+    },
+    "12e4c519-4c0b-4d6f-bfd6-39bb499b00fd": {
+      "ProjectGuid": "12e4c519-4c0b-4d6f-bfd6-39bb499b00fd",
+      "DisplayName": "UnoPlatformDemo.iOS",
+      "ColorIndex": 3
+    },
+    "95260d6c-9bf8-422e-a0c1-060b29a809ed": {
+      "ProjectGuid": "95260d6c-9bf8-422e-a0c1-060b29a809ed",
+      "DisplayName": "Platforms",
+      "ColorIndex": 4
+    },
+    "f8b575ec-9cbc-43c8-95b0-e3e566d1f376": {
+      "ProjectGuid": "f8b575ec-9cbc-43c8-95b0-e3e566d1f376",
+      "DisplayName": "UnoPlatformDemo.Wasm",
+      "ColorIndex": 5
+    },
+    "65948a98-d9b9-4f4e-a0ae-cfeabbd4c680": {
+      "ProjectGuid": "65948a98-d9b9-4f4e-a0ae-cfeabbd4c680",
+      "DisplayName": "UnoPlatformDemo.Skia.Tizen",
+      "ColorIndex": 6
+    },
+    "a50c849a-8e2c-460b-8060-1f989059c25b": {
+      "ProjectGuid": "a50c849a-8e2c-460b-8060-1f989059c25b",
+      "DisplayName": "UnoPlatformDemo.Skia.Wpf",
+      "ColorIndex": 7
+    },
+    "11d9a8f9-47d2-4ed1-a687-f51f345599c7": {
+      "ProjectGuid": "11d9a8f9-47d2-4ed1-a687-f51f345599c7",
+      "DisplayName": "UnoPlatformDemo.Skia.Wpf.Host",
+      "ColorIndex": 8
+    }
+  },
+  "NextColorIndex": 9
+}

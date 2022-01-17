@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)uno.sourcegenerationtasks\4.0.0\build\netstandard1.0\Uno.SourceGenerationTasks.targets" Condition="Exists('$(NuGetPackageRoot)uno.sourcegenerationtasks\4.0.0\build\netstandard1.0\Uno.SourceGenerationTasks.targets')" />
+    <Import Project="$(NuGetPackageRoot)uno.ui\4.0.11\buildTransitive\netstandard2.0\Uno.UI.targets" Condition="Exists('$(NuGetPackageRoot)uno.ui\4.0.11\buildTransitive\netstandard2.0\Uno.UI.targets')" />
+    <Import Project="$(NuGetPackageRoot)tizen.net.api5\5.0.0.14638\build\tizen50\Tizen.NET.API5.targets" Condition="Exists('$(NuGetPackageRoot)tizen.net.api5\5.0.0.14638\build\tizen50\Tizen.NET.API5.targets')" />
+    <Import Project="$(NuGetPackageRoot)tizen.net\8.0.0.15631\build\tizen40\Tizen.NET.targets" Condition="Exists('$(NuGetPackageRoot)tizen.net\8.0.0.15631\build\tizen40\Tizen.NET.targets')" />
+    <Import Project="$(NuGetPackageRoot)skiasharp\2.80.3\buildTransitive\tizen40\SkiaSharp.targets" Condition="Exists('$(NuGetPackageRoot)skiasharp\2.80.3\buildTransitive\tizen40\SkiaSharp.targets')" />
+    <Import Project="$(NuGetPackageRoot)uno.ui.runtime.skia.tizen\4.0.11\buildTransitive\Uno.UI.Runtime.Skia.Tizen.targets" Condition="Exists('$(NuGetPackageRoot)uno.ui.runtime.skia.tizen\4.0.11\buildTransitive\Uno.UI.Runtime.Skia.Tizen.targets')" />
+    <Import Project="$(NuGetPackageRoot)uno.ui.skia.tizen\4.0.11\build\Uno.UI.Skia.Tizen.targets" Condition="Exists('$(NuGetPackageRoot)uno.ui.skia.tizen\4.0.11\build\Uno.UI.Skia.Tizen.targets')" />
+    <Import Project="$(NuGetPackageRoot)uno.ui.remotecontrol\4.0.11\buildTransitive\Uno.UI.RemoteControl.targets" Condition="Exists('$(NuGetPackageRoot)uno.ui.remotecontrol\4.0.11\buildTransitive\Uno.UI.RemoteControl.targets')" />
+  </ImportGroup>
+</Project>
